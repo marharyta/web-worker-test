@@ -3,9 +3,7 @@ onmessage = function(e) {
     var interval = setInterval(
         function(){ 
             setTimeout(function(){ console.log('we pretended we waited') }, 3000);
-            fetch('beyonce-a.jpg', {
-                mode: 'no-cors' // 'cors' by default
-              })
+            fetch('beyonce-a.jpg')
             .then(function(response) {
                 return response.blob();
               }).then(function(myBlob) {
